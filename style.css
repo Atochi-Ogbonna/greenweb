@@ -152,15 +152,6 @@ form p a{
 }
 
 
-.fa-eye-slash {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    cursor: pointer;
-    transform: translate(0, -50%);
-}
-
 
 @media screen and (max-width: 768px){
     .background{
