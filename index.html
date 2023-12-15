@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Web</title>
+    <link href="Asset/logo.png" rel="icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+    <script
+      src="https://kit.fontawesome.com/19125933cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+
+
+    <div class="container">
+      <div class="form-box">
+          <h1 id="title">Sign Up</h1>
+          <form>
+              <div class="input-group">
+
+                  <div class="input-field" id="nameField">
+                      <i class="fa-solid fa-user"></i>
+                      <input type="text" placeholder="Name">
+                  </div>
+
+                  <div class="input-field">
+                      <i class="fa-solid fa-envelope"></i>
+                      <input type="email" placeholder="Email">
+                  </div>
+                  
+                  <div class="input-field">
+                      <i class="fa-solid fa-lock"></i>
+                      <input type="password" placeholder="Password">
+                      <i class="fa-solid fa-eye" id="togglePassword"></i>
+                      <i class="fa-solid fa-eye-slash" id="togglePasswordSlash"></i>
+                  </div>
+
+                  <a href="#">
+                    <p style="color: #999; font-size: 14px; text-align: right;" id="forgot" >Forgot Password</p>
+                    </a>
+
+                  <div class="btn-field">
+                    <button type="button" id="signupBtn" onclick={sign()} >Sign Up</button>
+                    <button type="button" id="signinBtn" onClick={myFunc()} class="disable">Sign In</button>
+                </div>
+                  
+              </div>
+
+              <a href="#">
+                <div class="google"><img src="Asset/google.png" height="20" width="20">Register with Google</div>
+                </a>
+
+              <p>By Continuing, you agree to our <a href="#">Terms of Service</a> <br>and <a href="#">Privacy Policy</a></p>
+
+              <a href="#">
+                <div class="creator-sign-in">Register as Creator<i class="fa-solid fa-arrow-right"></i></div>
+              </a>
+              
+              </form>
+              </div>
+            <div class="background"></div>
+            </div>
+
+            <script>
+          
+            const myFunc =  function(){
+              nameField.style.display = "none"
+              title.innerHTML = "Sign In"
+              forgot.style.display = "block"
+              signinBtn.classList.remove("disable")
+              signupBtn.classList.add("disable")
+          };
+
+          const sign = function(){
+            nameField.style.display = "flex"
+            title.innerHTML = "Sign Up"
+            forgot.style.display = "none"
+            signupBtn.classList.remove("disable")
+            signinBtn.classList.add("disable")
+          };
+
+
+
+
+        //   document.getElementById('togglePassword').addEventListener('click', function () {
+        //     var passwordInput = document.getElementById('passwordInput');
+        //     var togglePassword = document.getElementById('togglePassword');
+        //     var togglePasswordSlash = document.getElementById('togglePasswordSlash');
+
+        //     if (passwordInput.type === 'password') {
+        //         passwordInput.type = 'text';
+        //         togglePassword.style.display = 'none';
+        //         togglePasswordSlash.style.display = 'block';
+        //     } else {
+        //         passwordInput.type = 'password';
+        //         togglePassword.style.display = 'block';
+        //         togglePasswordSlash.style.display = 'none';
+        //     }
+        // });
+
+              </script>
+
+  </body>
+
+</html>
