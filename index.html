@@ -38,9 +38,9 @@
                   
                   <div class="input-field">
                       <i class="fa-solid fa-lock"></i>
-                      <input type="password" placeholder="Password">
-                      <i class="fa-solid fa-eye" id="togglePassword"></i>
-                      <!-- <i class="fa-solid fa-eye-slash" id="togglePasswordSlash"></i> -->
+                      <input id="passwordtxt" type="password" placeholder="Password">
+                      <i class="fa-solid fa-eye" id="togglePassword" onclick={toggle()} ></i>
+                      <i class="fa-solid fa-eye-slash" id="togglePasswordSlash" onclick={toggleslash()} ></i>
                   </div>
 
                   <a href="#">
@@ -55,13 +55,13 @@
               </div>
 
               <a href="#">
-                <div class="google"><img src="Asset/google.png" height="20" width="20">Register with Google</div>
+                <div id="register" class="google"><img src="Asset/google.png" height="20" width="20">Register with Google</div>
                 </a>
 
-              <p>By Continuing, you agree to our <a href="#">Terms of Service</a> <br>and <a href="#">Privacy Policy</a></p>
+              <p id="terms">By Continuing, you agree to our <a href="#">Terms of Service</a> <br>and <a href="#">Privacy Policy</a></p>
 
               <a href="#">
-                <div class="creator-sign-in">Register as Creator<i class="fa-solid fa-arrow-right"></i></div>
+                <div id="creator" class="creator-sign-in">Register as Creator<i class="fa-solid fa-arrow-right"></i></div>
               </a>
               
               </form>
@@ -77,6 +77,9 @@
               forgot.style.display = "block"
               signinBtn.classList.remove("disable")
               signupBtn.classList.add("disable")
+              terms.style.display = "none"
+              creator.style.display = "none"
+              register.style.display = "none"
           };
 
           const sign = function(){
@@ -85,7 +88,24 @@
             forgot.style.display = "none"
             signupBtn.classList.remove("disable")
             signinBtn.classList.add("disable")
+            terms.style.display = "block"
+            creator.style.display = "flex"
+            register.style.display = "flex"
           };
+
+          const toggle = function(){
+            togglePassword.style.display = "none"
+            passwordtxt.type = "text"
+            togglePasswordSlash.style.display = "block"
+          };
+
+          const toggleslash = function(){
+            togglePassword.style.display = "block"
+            passwordtxt.type = "password"
+            togglePasswordSlash.style.display = "none"
+          };
+
+
 
 
 

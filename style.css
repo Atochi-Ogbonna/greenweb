@@ -43,7 +43,7 @@
     max-height: 65px;
     transition: max-height 0.5s;
     overflow: hidden;
-    width: 290px;
+    width: 305px;
 }
 
  input{
@@ -149,6 +149,10 @@ form p a{
     font-size: 12px;
     color: #47da89;
     
+}
+
+#togglePasswordSlash{
+    display: none;
 }
 
 
