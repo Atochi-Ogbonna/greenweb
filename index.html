@@ -43,9 +43,21 @@
                       <i class="fa-solid fa-eye-slash" id="togglePasswordSlash" onclick={toggleslash()} ></i>
                   </div>
 
-                  <a href="Forgotpassword.html">
-                    <p style="color: #999; font-size: 14px; text-align: right;" id="forgot" >Forgot Password</p>
-                    </a>
+                  <div class="children" id="child" >
+                    <div class="remember">
+                      <div>
+                        <i class="fa-regular fa-square" id="boxtick" onClick={box()} ></i><i class="fa-solid fa-square-check" id="checktick" onClick={checkbox()} ></i>
+                      </div>
+                    
+                      <p style="color: #999; font-size: 14px; text-align: right;" id="remember" >Remember Me</p>
+                    </div>
+                      
+  
+                    <a href="Forgotpassword.html">
+                      <p style="color: #999; font-size: 14px; text-align: right;" id="forgot" >Forgot Password</p>
+                      </a>
+                  </div>
+                
 
                   <div class="btn-field">
                     <a href="#">
@@ -82,6 +94,7 @@
               terms.style.display = "none"
               creator.style.display = "none"
               register.style.display = "none"
+              child.style.display = "flex"
           };
 
           const sign = function(){
@@ -93,6 +106,7 @@
             terms.style.display = "block"
             creator.style.display = "flex"
             register.style.display = "flex"
+            child.style.display = "none"
           };
 
           const toggle = function(){
@@ -107,6 +121,19 @@
             togglePasswordSlash.style.display = "none"
           };
 
+          const box = function(){
+            boxtick.style.display = "none"
+            checktick.style.color = "#47da89"
+            remember.style.color = "#fff"
+            checktick.style.display = "flex"
+
+          }
+
+          const checkbox = function(){
+            checktick.style.display = "none"
+            boxtick.style.display = "flex"
+            remember.style.color = "#999"
+          }
 
 
 

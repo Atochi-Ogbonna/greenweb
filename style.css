@@ -157,7 +157,38 @@ form p a{
     display: none;
 }
 
+.children{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.children{
+    display: none;
+}
+
+.children #forgot{
+    margin-top: -1px;
+}
+
+.remember{
+    display: flex;
+    align-items: center;
+}
+
+.remember p{
+    text-align: center;
+    margin-top: -1px;
+    margin-left: 6px;
+}
+
+.remember i{
+    color: #999;
+}
+
+#checktick{
+    display: none;
+}
 
 @media screen and (max-width: 768px){
     .background{
