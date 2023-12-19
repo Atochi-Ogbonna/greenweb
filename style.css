@@ -168,6 +168,10 @@ form p a{
 /* ====SSO END==== */
 
 
+
+/* =======FORGOT PASSWORD====== */
+
+
 .entry{
     background: #fff;
     border-radius: 3px;
@@ -251,3 +255,99 @@ form p a{
     }
     
 }
+
+/* =======END FORGOT PASSWORD====== */
+
+
+
+
+    .auth{
+        display: flex;
+      
+    }
+
+    .grop{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .auth-text h2{
+        color: white;
+    }
+
+    .auth-text p{
+        color: white;
+    }
+
+    .entryfld{
+        background-color: white;
+        border-radius: 3px;
+        display: block;
+        align-items: center;
+        width: 300px;
+    }
+
+    .entryfld input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        /* margin-left: 1px; */
+    }
+
+    /* input[type=number] {
+         -moz-appearance: none;
+      } */
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+    .Authen-text{
+        color: white;
+        text-align: left;
+    } 
+
+    #authentication{
+        background-color: #00853C;
+        color: #fff;
+        height: 45px;
+        width: 280px;
+        border-radius: 40px; 
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+       transition: 1s;
+       margin-top: 5rem;
+    }
+
+
+
+    @media screen and (max-width: 768px){
+        .grop{
+            display: flex;
+            align-items: center;
+            width: auto;
+            margin-top: 6rem;
+        }
+
+        .auth{
+            display: flex;
+            width: auto;
+            justify-content: center;
+          
+        }
+    }
+
+
+
+
