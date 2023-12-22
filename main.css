@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #181A20;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* <!-- ============== Toast ==================== --> */
+
+.creator{
+    background-color: #2F323A;
+    width: 100%;
+    padding: 18px;
+}
+
+.creator p{
+    color: white;
+    background: none;
+    font-size: 12px;
+}
+
+.creator button{
+    padding: 6px 14px;
+    border: 0.1rem solid #7EB693;
+    background: #2F323A;
+    border-radius: 4px;
+    color: #7EB693;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.creator .btn{
+        background-color: transparent;
+}
+.btn i{
+    color: white;
+    font-size: 24px;
+    background: transparent;
+}
+
+
+.creator{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+}
+
+@media screen and (min-width: 768px){
+    .creator p{
+        font-size: 16px;
+    }
+}
+
+/* @media screen and (max-width: 768px){
+
+    .creator p{
+        font-size: 16px;
+    }
+} */
+
+
+.creator{
+    z-index: 999;
+}
+
+/* <!-- ============== END Toast ==================== --> */
+
+
+/* <!-- ============== DEARCH OPTION ==================== --> */
+
+.search{
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search input{
+    background-color: #252830;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 12px 50px;
+    outline: none;
+    font-weight: 600;
+    
+}
+
+
+.srch{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.txt{
+    display: flex;
+    border: 0.1rem solid white;
+    padding: 10px 30px;
+    border-radius: 40px;
+    gap: 1rem;
+    align-items: center;
+}
+
+.txt i{
+    color: white;
+}
+
+.txt p{
+    color: white;
+    font-size: 14px;
+}
+
+.srch h4{
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+
+@media screen and (min-width: 768px){
+
+    .search{
+        display: flex;
+        justify-content: space-around;
+       
+    } 
+}
+
+
+
+/* <!-- ============== END SEARCH OPTION ==================== --> */
+
+
+
+/* <!-- ==============UX DESIGN SEARCHES ==================== --> */
+
+
+.design-group{
+    padding-top: 2rem;
+}
+
+.container .cont-child1{
+    background: white;
+    background-position: center;
+    background-size: 20rem;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+    margin-top: 2.5rem;
+}
+
+.avatar{
+    background: white;
+    background-position: center;
+    background-size: 3rem;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    
+}
+
+.container .cont-child2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.container .cont-child2 h3{
+    color: white;
+    font-size: 14px;
+}
+
+.container .cont-child2 p{
+    color: #00853C;
+    font-size: 14px;
+}
+
+.cont-child2 button{
+    background-color: #00853C;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+@media screen and (min-width: 768px){
+    .design-group{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+} 
+
+
+.cont-child2 button { transition: all .2s ease-in-out; }
+.cont-child2 button:hover { transform: scale(1.1); }
+
+
+
+.cont-child1 { transition: all .2s ease-in-out; }
+.cont-child1:hover { transform: scale(1.1); }
+
+/* <!-- ==============UX DESIGN SEARCHES ==================== --> */
+
+
