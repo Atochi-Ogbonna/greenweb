@@ -19,38 +19,97 @@
   </head>
   <body>
 
-<!-- ============== Toast ==================== -->
+    <!-- ===NAVIGATION BAR === -->
+    <header>
+        <div class="logo"><img src="./Asset/logo.png"><img id="md-logo" src="Asset/logo2.png"></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="nav-bar">
+            <ul>
+                <li>
+                    <a class="active" href="#">Websites<i class="fa-solid fa-chevron-down"></i></a>
+                </li>
+
+                <li>
+                    <a href="#">Web App<i class="fa-solid fa-chevron-down"></i></a>
+                </li>
+
+                <li>
+                    <a href="#">Ui/Ux Templates<i class="fa-solid fa-chevron-down"></i></a>
+                </li>
+
+                <li>
+                    <a href="#">Graphic Design<i class="fa-solid fa-chevron-down"></i></a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+            </ul>
+        </div>
+      </header>
+      <!-- ===NAVIGATION BAR === -->
+
+
+      <!-- ============== Toast ==================== -->
 
     <div class="creator" id="green" >   
-            <p>Become a <strong style="background: none; color: #00853C; text-transform: uppercase;" >Green Creator</strong> and sell your Designs on Green Web</p>
-            <a href="GreenWeb sso/index.html">
-                <button type="button">Register for Free</button>
-                </a>
-               <div class="btn"><i class="fa-solid fa-circle-xmark" onclick={creator()}></i></div> 
-    </div>
+        <p>Become a <strong style="background: none; color: #00853C; text-transform: uppercase;" >Green Creator</strong> and sell your Designs on Green Web</p>
+        <a href="GreenWeb sso/index.html">
+            <button type="button">Register for Free</button>
+            </a>
+           <div class="btn"><i class="fa-solid fa-circle-xmark" onclick={creator()}></i></div> 
+</div>
 
 <!-- ============== END Toast ==================== -->
 
 
-/* <!-- ============== END SEARCH OPTION ==================== --> */
+      <!-- ===========HERO CAROUSEL================= -->
 
-<div class="search-group">
-    <div class="search">
-   
-        <input type="text" placeholder="Search Designs...">
-        
-    </div>
-    
-    <div class="srch">
-        <div class="txt">
-            <p>Landing Page</p>
-            <i class="fa-solid fa-chevron-down"></i>
+      <div class="slideshow-container">
+        <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-2.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
+          <div class="numbertext">1 / 3</div>
         </div>
+        
+        <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-3.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
+            <div class="numbertext">2 / 3</div>
+          </div>
+        
+          <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-4.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
+            <div class="numbertext">3 / 3</div>
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        
+      <!-- ===========HERO CAROUSEL================= -->
+
+
+ <!-- ============== SEARCH OPTION ==================== --> 
+
+<!-- <div class="search-group">
+    <div class="search">
+        <input type="text" placeholder="Search Designs...">
+            
+        <div class="txt">
+            <i class="fa-regular fa-bookmark"></i>
     </div>
-    
-</div>
-
-
+    </div>  
+</div> -->
 
 <!-- ============== END SEARCH OPTION ==================== --> 
 
@@ -203,7 +262,53 @@
         const creator = function(){
            green.style.display = "none" 
         };
-    </script>
+
+
+        //Hamburger//
+
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function() {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+        //Hamburger//
+
+
+        // <!-- ===========HERO CAROUSEL================= -->
+
+        
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+// <!-- ===========HERO CAROUSEL================= -->
+
+</script>
 
   </body>
 </html>

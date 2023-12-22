@@ -9,14 +9,161 @@
     text-decoration: none;
 }
 
+/* ===NAVIGATION BAR === */
 
 
+.logo img{
+    height: 35px;
+    width: 144px;
+    background: none;
+}
+
+#md-logo{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .logo img{
+        display: none;
+    }
+
+    #md-logo{
+        display: flex;
+        height: 40px;
+        width: 40px;
+    }
+}
 
 
+.logo{
+    background: none;
+}
+
+i{
+    background: none;
+    margin-left: 0.6rem;
+}
+
+li{
+    background: none;
+    
+}
+
+ul{
+    background: none;
+    
+}
 
 
+.nav-bar{
+    background: none;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #252830;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 999;
+}
+
+.hamburger{
+    display: none;
+    background: none;
+}
+
+.nav-bar ul{
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+}
 
 
+.nav-bar ul li a{
+    display: block;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 3px;
+    background: none;
+    font-size: 14px;
+}
+
+.nav-bar ul li a:hover{
+    border-bottom: 2px solid #00853C;
+}
+
+.nav-bar ul li a.active {
+    border-bottom: 2px solid #00853C;
+}
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width:110px){
+    header{
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px;
+    }
+
+    .nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #252830;
+    transition: 0.5s;
+    }
+
+    .nav-bar.active{
+        height: 450px;
+        background-color: #252830;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+    }
+}
+
+
+/* ===END NAVIGATION BAR === */
 
 
 /* <!-- ============== Toast ==================== --> */
@@ -25,6 +172,7 @@
     background-color: #2F323A;
     width: 100%;
     padding: 18px;
+    margin-top: 4.8rem;
 }
 
 .creator p{
@@ -68,13 +216,6 @@
     }
 }
 
-/* @media screen and (max-width: 768px){
-
-    .creator p{
-        font-size: 16px;
-    }
-} */
-
 
 .creator{
     z-index: 999;
@@ -83,12 +224,108 @@
 /* <!-- ============== END Toast ==================== --> */
 
 
-/* <!-- ============== DEARCH OPTION ==================== --> */
+/* ======HERO CAROUSEL========= */
 
-.search{
-    padding-top: 4rem;
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+  padding-top: 8rem;
+  flex-wrap: wrap;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* padding: 16px; */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #7EB693;
+  border-radius: 4px;
+}
+
+.prev, .next {
+    background: #252830;
+    border-radius: 3rem;
+    color: white;
+    padding: 9px 18px;
+    margin-top: 3rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    opacity: 70%;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #7EB693;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #00853C;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/* ======HERO CAROUSEL========= */
+
+
+/* <!-- ============== SEARCH OPTION ==================== --> */
+
+/* .search{
+    padding-top: 10rem;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -97,45 +334,27 @@
 .search input{
     background-color: #252830;
     border: none;
-    border-radius: 50px;
+    border-radius: 4px;
     color: white;
-    padding: 12px 50px;
+    padding: 16px 20%;
     outline: none;
     font-weight: 600;
-    
+    flex-wrap: wrap;
 }
 
-
-.srch{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 3rem;
-}
 
 .txt{
-    display: flex;
-    border: 0.1rem solid white;
-    padding: 10px 30px;
-    border-radius: 40px;
-    gap: 1rem;
+    background-color: #252830;
+    padding: 10px;
     align-items: center;
+    justify-content: center;
+    display: none;
 }
 
 .txt i{
     color: white;
 }
 
-.txt p{
-    color: white;
-    font-size: 14px;
-}
-
-.srch h4{
-    color: white;
-    font-size: 18px;
-}
 
 
 
@@ -145,10 +364,14 @@
 
     .search{
         display: flex;
-        justify-content: space-around;
+       gap: 1rem;
        
     } 
-}
+
+    .txt{
+        display: flex;
+    }
+} */
 
 
 
@@ -161,6 +384,7 @@
 
 .design-group{
     padding-top: 2rem;
+    padding-bottom: 4rem;
 }
 
 .container .cont-child1{
