@@ -466,3 +466,173 @@ img {vertical-align: middle;}
 /* <!-- ==============UX DESIGN SEARCHES ==================== --> */
 
 
+
+
+
+
+
+
+/* =============PREVIEW PAGE======== */
+
+/* The grid: Four equal columns that floats next to each other */
+
+
+ .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    float: left;
+    width: 16%;
+    padding: 10px;
+    margin-top: 1rem;
+  } 
+  
+  /* Style the images inside the grid */
+   .column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  } 
+  
+  /* Clear floats after the columns */
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } 
+  
+  /* The expanding image container */
+   .containers {
+    width: 40%;
+  } 
+  
+
+  
+  /* Closable button inside the expanded image */
+   .closebtn {
+    background: #2F323A;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 18px;
+    opacity: 60%;
+  } 
+
+
+   .build{
+    height: 100px;
+    width: 35%;
+    background: #2F323A;
+    margin-bottom: 10rem;
+  }
+
+
+  .carrier{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    border: 0.1rem solid #2F323A;
+    padding: 1rem;
+  } 
+
+
+   .user-child{
+    display: flex;
+    gap: 1rem;
+  }
+
+  .user-child h3, p{
+    color: white;
+  }
+
+
+  .user h2{
+    color: white;
+    font-size: 2rem;
+    margin-top: 2rem;
+  } 
+
+   .user button{
+    background-color: #00853C;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+  } 
+
+
+   .column:hover{
+    background: #2F323A;
+  }
+
+  .con-fam{
+    margin-bottom: 2rem;
+  } 
+
+
+
+  /* ====Media Query==== */
+
+   @media (max-width:768px){
+    .row{
+        display: flex;
+    }
+} 
+
+
+@media (max-width:768px){
+
+
+    .containers{
+        width: 100%;
+    }
+
+    .column{
+        width: 50%;
+        padding: 0px 8px; 
+        margin-top: 0;
+    }
+
+    .closebtn{
+        right: 30px;
+        top: 30px;
+    } 
+
+     .carrier{
+        display: block;
+      }
+
+      .build{
+        width: 100%;
+      }
+
+      .carrier{
+        margin-top: 0;
+        border: none;
+      }
+
+      .user h2{
+        font-size: 1rem;
+      }
+
+      .user-child{
+        margin-top: 1rem;
+      }
+      
+    }
+ 
+
