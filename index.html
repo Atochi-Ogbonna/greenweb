@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Green Web</title>
     <link href="logo.png" rel="icon" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet"
@@ -19,296 +19,346 @@
   </head>
   <body>
 
-    <!-- ===NAVIGATION BAR === -->
-    <header>
+
+    <!-- //NAVAIGATION BAR// -->
+
+    <header id="nav">
+        <div class="base">
         <div class="logo"><img src="./Asset/logo.png"><img id="md-logo" src="Asset/logo2.png"></div>
+        
         <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+            <div class="signin" id="hide-sign">
+                <a href="#">Sign In</a>
+            </div>
+            <i class="fa-solid fa-bars" id="menu" onclick="openNav()"></i>
         </div>
+    </div>
 
-        <div class="nav-bar">
+        <div class="nav-bar" id="navbar">
+            <div class="search-mv">
+                <div id="seach" class="search-mobile">
+                    <input type="text" placeholder="Search your taste...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>  
+            </div>
+
             <ul>
+
+            <li>
+                <i class="fa-solid fa-xmark" id="hideMenu" onclick="closeNav()"></i>
+            </li>
+            
                 <li>
-                    <a class="active" href="#">Websites<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="#">Buy Websites<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Landing Page</a>
+                            <a href="#">Web Application</a>
+                        </div>
+                        </div>
                 </li>
 
                 <li>
-                    <a href="#">Web App<i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#">Mobile Application</a>
                 </li>
 
                 <li>
-                    <a href="#">Ui/Ux Templates<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                    <a href="#">Ux Templates<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Ui interface</a>
+                        <a href="#">Design System</a>
+                        <a href="#">Premium Templates</a>
+                    </div>
+                    </div>
                 </li>
 
                 <li>
-                    <a href="#">Graphic Design<i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#">Design Inspiration</a>
                 </li>
 
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Find Developers</a>
                 </li>
             </ul>
         </div>
+        <div class="search-group">
+            <div class="search">
+                <input type="text" placeholder="Search your taste...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>  
+        </div> 
+
+        <div class="signin">
+            <a href="#">Sign In</a>
+        </div>
       </header>
-      <!-- ===NAVIGATION BAR === -->
 
 
-      <!-- ============== Toast ==================== -->
-
-    <div class="creator" id="green" >   
-        <p>Become a <strong style="background: none; color: #00853C; text-transform: uppercase;" >Green Creator</strong> and sell your Designs on Green Web</p>
-        <a href="GreenWeb sso/index.html">
-            <button type="button">Register for Free</button>
-            </a>
-           <div class="btn"><i class="fa-solid fa-circle-xmark" onclick={creator()}></i></div> 
-</div>
-
-<!-- ============== END Toast ==================== -->
+      <!-- // END OF NAVIGATION BAR // -->
 
 
-      <!-- ===========HERO CAROUSEL================= -->
 
-      <div class="slideshow-container">
-        <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-2.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
-          <div class="numbertext">1 / 3</div>
+      <!-- // START OF HERO // -->
+
+
+      <div class="hero">
+        <div class="hero-txt">
+            <h6>Over 1 million ready-to-use templates!</h6>
+            <h1>Discover the <span>Best Website</span> <br> for your Organization</h1>
+            <p>Buy a website and get <span>free Domain</span> and <span>hosting.</span> <br>This offer is available for first time users</p>
+            <a href="#"><button id="ux" >View Template</button></a>
         </div>
-        
-        <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-3.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
-            <div class="numbertext">2 / 3</div>
-          </div>
-        
-          <div class="mySlides fade" style="background-image: url(Asset/Design/design-img-4.png); width: 100%; height: 400px; background-position: center; background-size: 60rem; background-repeat: no-repeat;">
-            <div class="numbertext">3 / 3</div>
-          </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
+        <div class="hero-image"></div>
+      </div>
 
-        
-      <!-- ===========HERO CAROUSEL================= -->
+      <!-- // END HERO // -->
 
 
- <!-- ============== SEARCH OPTION ==================== --> 
-
-<!-- <div class="search-group">
-    <div class="search">
-        <input type="text" placeholder="Search Designs...">
-            
-        <div class="txt">
-            <i class="fa-regular fa-bookmark"></i>
-    </div>
-    </div>  
-</div> -->
-
-<!-- ============== END SEARCH OPTION ==================== --> 
-
-
-
+      
 <!-- ==============UX DESIGN SEARCHES ==================== -->
 
 
-    <div class="design-group">
+    <div id="ux" class="design-group">
 
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-1.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-2.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-1.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-2.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
             </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
         </div>
-    </div>
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-2.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-1.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
-            </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-3.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-3.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
-            </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>        
-    </div>
-
-
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-4.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-            <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-4.png);"></div>
-             </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
-            </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-5.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-5.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
-            </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>
-    </div>
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-6.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-6.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
-            </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>        
-    </div>
     
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-7.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-7.png);"></div>
-                 </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-2.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-1.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
             </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>        
-    </div>
-
-
-    <div class="container">
-        <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-8.png);"></div></a>
-        <div class="cont-child2">
-            <a href="#">
-                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-8.png);"></div>
+        </div>
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-3.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-3.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
+    
+    
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-4.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-4.png);"></div>
                  </a>
-            <div>
-                <h3>Hero Banner</h3>
-                <p>Habor Grey</p>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
             </div>
-            <a href="preview.html">
-            <button type="button">Buy $50</button>
-            </a>
-        </div>        
-    </div>
-    </div>
+        </div>
+    
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-5.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-5.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>
+        </div>
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-6.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-6.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
+        
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-7.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-7.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
+    
+    
+        <div class="container">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-8.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-8.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
 
-<!-- ============== END UX DESIGN SEARCHES ==================== -->
-
-
-    <script>
-
-        const creator = function(){
-           green.style.display = "none" 
-        };
-
-
-        //Hamburger//
-
-        hamburger = document.querySelector(".hamburger");
-        hamburger.onclick = function() {
-            navBar = document.querySelector(".nav-bar");
-            navBar.classList.toggle("active");
-        }
-
-        //Hamburger//
-
-
-        // <!-- ===========HERO CAROUSEL================= -->
 
         
-let slideIndex = 1;
-showSlides(slideIndex);
+        <div class="container" id="collapse">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-8.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-8.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+        
+        <div class="container" id="collapse">
+            <a href="preview.html"><div class="cont-child1" style="background-image: url(Asset/Design/design-img-8.png);"></div></a>
+            <div class="cont-child2">
+                <a href="#">
+                    <div class="avatar" style="background-image: url(Asset/Avatar/Avatar-img-8.png);"></div>
+                     </a>
+                <div>
+                    <h3>Hero Banner</h3>
+                    <p>Habor Grey</p>
+                </div>
+                <a href="preview.html">
+                <button type="button">Buy $50</button>
+                </a>
+            </div>        
+        </div>
+        </div>
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+        <div class="more" id="led">
+           <button id="loading">Load More</button>
+        </div>
+    
+    <!-- ============== END UX DESIGN SEARCHES ==================== -->
+    
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+
+
+
+
+
+
+
+      
+    <script>
+
+        // const creator = function(){
+        //    green.style.display = "none" 
+        // };
+
+       
+
+
+        // //Hamburger//
+
+        // hamburger = document.querySelector(".hamburger");
+        // hamburger.onclick = function() {
+        //     navBar = document.querySelector(".nav-bar");
+        //     navBar.classList.toggle("active");
+        // }
+
+      
+
+
+        // //Hamburger//
+
+
+        //NAVBAR SCROLL BEHAVIOUR//
+
+        var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+
+    if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+    document.getElementById("nav").style.background = "#181A20";
+    // document.getElementById('green').style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-80px";
+    // document.getElementById("green").style.top = "-200px";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+  prevScrollpos = currentScrollPos;
+}
+
+function openNav() {
+  document.getElementById("navbar").style.width = "65%";
 }
 
 
-// <!-- ===========HERO CAROUSEL================= -->
+function closeNav() {
+  document.getElementById("navbar").style.width = "0";
+}
+
+
+
 
 </script>
 
-  </body>
+
+</body>
 </html>
