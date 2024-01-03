@@ -65,10 +65,11 @@ header{
     background-color: #252830;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 100px;
     position: fixed;
     z-index: 999;
+    transition: 0.5s;
 }
 
 .hamburger{
@@ -80,18 +81,19 @@ header{
     display: flex;
     text-decoration: none;
     list-style-type: none;
+    padding-left: 3rem;
 }
 
 
 .nav-bar ul li a{
     display: block;
     color: white;
-    padding: 10px 25px;
+    padding: 10px 15px;
     border-radius: 50px;
-    transition: 0.2s;
     margin: 0 3px;
     background: none;
     font-size: 14px;
+    transition: 0.5s;
 }
 
 .nav-bar ul li a:hover{
@@ -101,6 +103,28 @@ header{
 .nav-bar ul li a.active {
     border-bottom: 2px solid #00853C;
 }
+
+.signin a{
+    color: white;
+    background: none;
+}
+
+.signin{
+    background: #181A20;
+    border: #343741 solid;
+    padding: 10px 12px;
+    margin-left: 1.5rem;
+    border-radius: 4px;
+}
+
+.signin:hover{
+    background: #23262e;
+}
+
+.search-mv{
+    display: none;
+}
+
 
 @media only screen and (max-width:1320px){
     header{
@@ -114,17 +138,18 @@ header{
     }
 }
 
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1024px){
     .hamburger{
         display: block;
         cursor: pointer;
+        margin-left: 10rem;
     }
 
     .hamburger .line{
-        width: 30px;
-        height: 3px;
+        width: 22px;
+        height: 2px;
         background-color: white;
-        margin: 6px;
+        margin: 4px;
     }
 
     .nav-bar{
@@ -150,8 +175,8 @@ header{
     .nav-bar ul{
         display: block;
         width: fit-content;
-        margin: 80px auto 0 auto;
-        text-align: center;
+        margin: 40px 40px auto;
+        text-align: left;
         transition: 0.5s;
         opacity: 0;
         overflow: hidden;
@@ -160,10 +185,93 @@ header{
     .nav-bar ul li a{
         margin-bottom: 12px;
     }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signin{
+        display: none;
+    }
+
+    .search-mv{
+       display: flex; 
+       background: none;
+    }
+
+    .search-mobile{
+       opacity: 0;
+    }
+
+    .nav-bar.active .search-mobile{
+        opacity: 1;
+    }
+
+    .search-mobile{
+    background: #393d47;
+    padding: 10px 12px;
+    margin-left: 1rem;
+    border-radius: 4px;
+    margin: 20px 40px auto;
+    transition: 0.5s;
+    }
+
+    .search-mobile input{
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .search-mobile i{
+        color: white;
+    }
+
+    
 }
 
-
 /* ===END NAVIGATION BAR === */
+
+
+
+
+/* <!-- ==========BREADCRUMB=============== -->  */
+
+/* .bread-crumb{
+    width: 100%;
+    background-color: #2F323A;
+    position: fixed;
+    z-index: 99;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bread-crumb a{
+    color: white;
+    margin: 10px;
+    background: none;
+    padding: 10px;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 30px; 
+}
+
+.bread-crumb .hover:hover{
+    background: #00853C;  
+}
+
+@media (max-width:768px){
+    .bread-crumb{
+        display: none;
+    }
+} */
+
+
+/* <!-- ==========END BREADCRUMB=============== --> */
+
 
 
 /* <!-- ============== Toast ==================== --> */
@@ -218,53 +326,85 @@ header{
 
 
 .creator{
-    z-index: 999;
-}
+    z-index: 99;
+} 
 
 /* <!-- ============== END Toast ==================== --> */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======HERO CAROUSEL========= */
 
-
+/* 
 .mySlides {display: none}
-img {vertical-align: middle;}
+img {vertical-align: middle;} */
 
 /* Slideshow container */
-.slideshow-container {
+/* .slideshow-container {
   max-width: 80%;
   position: relative;
   margin: auto;
-  padding-top: 8rem;
+  padding-top: 12rem;
   flex-wrap: wrap;
-}
+} */
 
 /* Next & previous buttons */
-.prev, .next {
+/* .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  /* padding: 16px; */
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
-}
+} */
 
 /* Position the "next button" to the right */
-.next {
+/* .next {
   right: 0;
-}
+} */
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+/* .prev:hover, .next:hover {
   background-color: #7EB693;
   border-radius: 4px;
-}
+} */
 
-.prev, .next {
+/* .prev, .next {
     background: #252830;
     border-radius: 3rem;
     color: white;
@@ -282,10 +422,10 @@ img {vertical-align: middle;}
   padding: 8px 12px;
   position: absolute;
   top: 0;
-}
+} */
 
 /* The dots/bullets/indicators */
-.dot {
+/* .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -298,10 +438,10 @@ img {vertical-align: middle;}
 
 .active, .dot:hover {
   background-color: #00853C;
-}
+} */
 
 /* Fading animation */
-.fade {
+/* .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -309,12 +449,12 @@ img {vertical-align: middle;}
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
-}
+} */
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+/* @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
-}
+} */
 
 
 
@@ -323,55 +463,41 @@ img {vertical-align: middle;}
 
 /* <!-- ============== SEARCH OPTION ==================== --> */
 
-/* .search{
-    padding-top: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.search{
+    background: #393d47;
+    padding: 10px 20px;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+.search-group{
+    background: none;
 }
 
 
 .search input{
-    background-color: #252830;
+    background: none;
     border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 16px 20%;
     outline: none;
+    color: white;
     font-weight: 600;
-    flex-wrap: wrap;
 }
 
-
-.txt{
-    background-color: #252830;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    display: none;
-}
-
-.txt i{
+.search i{
     color: white;
 }
 
 
 
-
-
-
-@media screen and (min-width: 768px){
+ @media screen and (max-width: 1024px){
 
     .search{
-        display: flex;
-       gap: 1rem;
-       
-    } 
-
-    .txt{
-        display: flex;
+       display: none;
     }
-} */
+  
+}  
 
 
 
@@ -383,7 +509,7 @@ img {vertical-align: middle;}
 
 
 .design-group{
-    padding-top: 2rem;
+    padding-top: 35rem;
     padding-bottom: 4rem;
 }
 
@@ -634,5 +760,8 @@ img {vertical-align: middle;}
       }
       
     }
- 
+
+
+/* =============END PREVIEW PAGE======== */
+
 
