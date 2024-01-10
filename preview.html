@@ -50,7 +50,17 @@
 
 
       <div class="view-cont">
-        <div class="view-img1"></div>
+        <div class="carousel">
+          <div class="carousel_item"><img src="Asset/Design/design-img-1.png"></div>
+          <div class="carousel_item carousel_item_selected"><img src="Asset/Design/design-img-2.png"></div>
+          <div class="carousel_item"><img src="Asset/Design/design-img-3.png"></div>
+        </div>
+       
+        <div class="carousel_nav">
+        <span class="carousel_button"></span>
+        <span class="carousel_button carousel_button_selected"></span>
+        <span class="carousel_button"></span>
+        </div>
       </div>
 
       <div class="lower-txt">
@@ -137,31 +147,18 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <div class="cont_family">
+        <div class="image_content" style="background-image: url(Asset/Design/design-img-2.png);"><div class="overley">Preview Template<i class="fa-solid fa-up-right-from-square"></i></div></div>
+        <div class="item_content">
+          <h1>Lorem, ipsum dolor sit amet thwvegsvdhsgdGvdjgvkhvvjhgvdh.</h1>
+          <div class="content">
+            <p><i class="fa-regular fa-star"></i>Restuarant Website</p>
+            <span><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+            
+        </div>
+      </div>
+      
 
 
 
@@ -199,23 +196,63 @@ function closeNav() {
 }
 
   //NAVBAR SCROLL BEHAVIOUR//
+
+
+  const items = document.querySelectorAll('.carousel_item');
+  let currentIndex = 0;
+
+  function showItem(index) {
+    items.forEach((item, i) => {
+      item.classList.toggle('carousel_item_selected', i === index);
+    });
+  }
+
+  function nextItem() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showItem(currentIndex);
+  }
+
+  setInterval(nextItem, 3000); // Change 3000 to the desired interval in milliseconds
+
+
+
+
+
+
+
+
+
+
+
+
+  // document.querySelectorAll(".carousel").forEach(carousel => {
+  //   const items = carousel.querySelectorAll(".carousel_item");
+  //   const buttonHtml = Array.from(items, () => {
+  //     return `<span class="carousel_button"></span>`;
+  //   });
+
+  //   carousel.insertAdjacentHTML("beforeend", `
+  //   <div class="carousel_nav">
+  //     ${buttonsHtml.join("")}
+  //     </div>
+  //   `);
+
+      
+  //   const buttons = carousel.querySelectorAll(".carousel_button");
+
+  //   buttons.forEach((button, i) => {
+  //     button.addEventListener("click", () => {
+
+  //       items.forEach(item => item.classList.remove("carousel_item_selected"))
+  //       buttons.forEach(button => button.classList.remove("carousel_button_selected"));
+  //     });
+  //   });
+  // });
+
+
+
+
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </body>
   </html>
