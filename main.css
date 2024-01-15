@@ -408,7 +408,7 @@ header{
 
 @media (max-width: 768px){
     .hero-txt h1{
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .hero-txt p{
@@ -618,6 +618,14 @@ font-weight: 400;
     justify-content: center;
     gap: 1rem;
     margin-top: 4rem;
+}
+
+.content-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 @media (max-width: 768px){
