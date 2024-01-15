@@ -1060,14 +1060,14 @@ margin-bottom: 1rem;
     }
     
     .sect-5{
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
     .sect-5 h3{
     width: 450px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Poppins;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 40px; /* 143.75% */
