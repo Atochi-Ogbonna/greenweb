@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preview</title>
+    <link href="logo.png" rel="icon" />
+    <link rel="stylesheet" href="view.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
+    <script
+      src="https://kit.fontawesome.com/19125933cb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+
+
+    
+<!-- /* =======CREATORS DETAILS======== */ -->
+
+
+<div class="fixed-nav">
+  <div class="creator-detail">
+    <div class="creator-image"></div>
+    <div>
+      <h3>Atochi Ogbonna</h3>
+    <p>Front-End Developer</p>
+    </div>
+    
+  </div>
+ 
+  <div class="live-demo">
+    <i class="fa-regular fa-bookmark"></i>
+    <a href="Gp/Gp/index.html"><button>Live Demo</button></a>
+  </div>
+</div>
+
+<!-- /* =======CREATORS DETAILS======== */ -->
+
+
+
+
+
+
+
+    <!-- ======PREVIEW======= -->
+
+    <div class="con-fam">
+      
+      <div class="carrier">
+      <div class="containers">
+        <a href="Gp/Gp/index.html"><img src="one.png" id="expandedImg" style="width:100%"></a>
+      </div>
+
+      <div class="build">
+        <div class="user">
+
+         <!-- The four columns -->
+    <div class="row">
+      <div id="one" class="column">
+        <img src="one.png" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="two.png"  style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="three.png" style="width:100%" onclick="myFunction(this);">
+      </div>
+      <div class="column">
+        <img src="four.png" style="width:100%" onclick="myFunction(this);">
+      </div>
+    </div>
+  </div>
+
+          <div class="detail">
+            <h3>Hero Banner</h3>
+            <p style="font-size: 14px;">Lorem ipsum dolor sit amet consectetur. Donec non velit enim eget consectetur velit at hac. Et sed id ultricies posuere magna fringilla.</p>
+        </div>
+
+
+        <div class="package-detail">
+          <p><i class="fa-solid fa-star"></i>Domain (For 12 Months)</p>
+          <p><i class="fa-solid fa-star"></i>Hosting (For 12 Months)</p>
+          <p><i class="fa-solid fa-star"></i>Site Security Lock <span style="font-size: 10px; color: #7EB693;">(6 Months)</span></p>
+          <p><i class="fa-solid fa-star"></i>Business Email</p>
+          <p><i class="fa-solid fa-star"></i>Developer Fee</p>
+          <p><i class="fa-solid fa-star"></i>Ui/Ux Charges</p>
+          <p><i class="fa-solid fa-star"></i>Site Update <span style="font-size: 10px; color: #7EB693;">($22 /per yr)</span> </p>
+        </div>
+
+
+        <div class="percentage">
+          <p id="save"><span>$80.00</span><i class="fa-regular fa-face-smile"></i> SAVE 60%</p>
+          <div class="sale-cost">
+            <div class="cost">$48.99</div>
+            <div class="buybtn"><button>BUY NOW</button></div>  
+          </div>
+        </div>   
+        
+      </div>
+      </div>
+    </div>
+  
+    
+   
+
+    <!-- ======END PREVIEW======= -->
+
+
+    
+
+
+    <script>
+
+
+      //PREVIEW DETAILS//
+
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "flex";
+      }
+
+      //PREVIEW DETAILS//
+
+      
+       </script>      
+
+  </body>
+  </html>
