@@ -721,3 +721,135 @@ transition: 0.5s ease;
 
 
 /* ========= END SECTION TWO========= */
+
+
+
+/* ========= START SECTION THREE ========= */
+
+
+.section_3_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12rem;
+    margin-bottom: 4rem;
+    margin-top: 10rem;
+}
+
+.section_3_container h3{
+width: 450px;
+flex-shrink: 0;
+color: #FFF;
+font-family: Poppins;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 40px; /* 143.75% */
+}
+
+.section_3_container #sect_3_paragraph{
+color: #C8C8C8;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+width: 450px;
+line-height: 30px;
+margin-top: 1rem;
+}
+
+.section_3_detail{
+border-radius: 10px;
+border: 1px solid #525C60;
+background: var(--Background, #181A20);
+padding: 30px;
+height: fit-content;
+margin-bottom: 0.8rem;
+transition: 0.5s ease;
+}
+
+.section_3_detail:hover{
+    background-color: rgba(0, 133, 60, 0.15);
+    border-color: #00853C;
+    transform: scale(1.1); 
+}
+
+
+.section_3_detail h4{
+    color: white;
+}
+
+
+.detail_txt p{
+    width: 300px;
+    font-size: 14px;
+    margin-top: 0.4rem;
+    color: rgba(200, 200, 200, 1);
+}
+
+.section_3_detail i{
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: rgba(126, 182, 147, 1);
+}
+
+
+#use_section_3{
+    animation: elastic-spin 14s infinite ease;
+}
+
+@keyframes elastic-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(720deg); }
+  }
+
+
+  @media (max-width:768px){
+    .detail_txt p{
+        width: 220px;
+    }
+
+    .section_3_detail{
+        width: fit-content;
+    }
+
+    .section_3_detail h4{
+        width: 220px;
+    }
+
+    .section_3_txt h3{
+        font-size: 18px;
+        width: 300px;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    .section_3_container #sect_3_paragraph{
+        width: 300px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .section_3_txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-bottom: 0;
+    }
+
+    .section_3_container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6rem;
+    }
+  }
+
