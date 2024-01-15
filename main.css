@@ -760,8 +760,8 @@ margin-top: 1rem;
 
 .section_3_detail{
 border-radius: 10px;
-border: 1px solid #525C60;
-background: var(--Background, #181A20);
+border: 1px solid #39a769;
+background-color: rgba(0, 133, 60, 0.15);
 padding: 30px;
 height: fit-content;
 margin-bottom: 0.8rem;
@@ -769,8 +769,8 @@ transition: 0.5s ease;
 }
 
 .section_3_detail:hover{
-    background-color: rgba(0, 133, 60, 0.15);
-    border-color: #00853C;
+    background-color: rgba(0, 133, 60, 0.45);
+    border-color: #39a769;
     transform: scale(1.1); 
 }
 

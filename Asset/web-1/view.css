@@ -254,17 +254,27 @@ body{
     padding-bottom: 6rem;
 }
 .percentage #save{
-    background: #1E2027;
+    background: #00853C;
     padding: 10px 16px;
-    color: #7EB693;
-    font-size: 12px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
     border-radius: 30px;
+    transition: 0.5s ease;
 }
 
+.percentage #save i{
+  align-items: center;
+  margin-left: 0.4rem;
+}
+
+.percentage #save:hover{
+  background: rgba(126, 182, 147, 1);
+  transform: scale(1.1);
+}
 .percentage span{
     color: white;
-    text-decoration: line-through;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     padding-right: 1rem;
 }
