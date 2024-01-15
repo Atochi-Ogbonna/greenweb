@@ -219,36 +219,36 @@
 
 
 
-        <div class="content-2">
+        <div class="content-2" id="hide_content">
             <div class="section_2_content">
                 <div class="content_box">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <h4>Business Website</h4>
+                    <i class="fa-solid fa-blog"></i>
+                    <h4>Media/Blog</h4>
                 </div>
                     <div class="link">
-                        <p>300 Templates</p>
+                        <p>220 Templates</p>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>   
             </div>
     
             <div class="section_2_content">
                 <div class="content_box">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <h4>Portfolio</h4>
+                    <i class="fa-brands fa-product-hunt"></i>
+                    <h4>Product Page</h4>
                 </div>
                     <div class="link">
-                        <p>188 Templates</p>
+                        <p>200 Templates</p>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>   
             </div>
     
             <div class="section_2_content">
                 <div class="content_box">
-                    <i class="fa-solid fa-user-graduate"></i>
-                    <h4>Education</h4>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h4>E-commerce</h4>
                 </div>
                     <div class="link">
-                        <p>210 Templates</p>
+                        <p>50 Templates</p>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>   
             </div>
@@ -256,19 +256,25 @@
     
             <div class="section_2_content">
                 <div class="content_box">
-                    <i class="fa-brands fa-medium"></i>
-                    <h4>Entertainment</h4>
+                    <i class="fa-solid fa-comments-dollar"></i>
+                    <h4>Marketing</h4>
                 </div>
                     <div class="link">
-                        <p>80 Templates</p>
+                        <p>100 Templates</p>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>   
             </div>
         </div>
+
+        <div id="more" class="more_button" onclick="loadMore()"><i class="fa-solid fa-angles-down"></i></div>
+
+        <div id="less" class="more_button" onclick="loadLess()"><i class="fa-solid fa-angles-up"></i></div>
       </div>
 
+       <!-- ========== END SECTION TWO =========== -->
 
       
+       
 
 
 
@@ -332,6 +338,21 @@ function closeNav() {
 }
 
   //NAVBAR SCROLL BEHAVIOUR//
+
+
+  // SECTION TWO CONTENT LOAD MORE BUTTON ///
+
+  function loadMore() {
+    document.getElementById("hide_content").style.display = "flex";
+    document.getElementById("less").style.display = "flex"
+    document.getElementById("more").style.display = "none"
+  }
+
+  function loadLess() {
+    document.getElementById("hide_content").style.display = "none";
+    document.getElementById("more").style.display = "flex"
+    document.getElementById("less").style.display = "none"
+  }
   
 </script>
   </body>
