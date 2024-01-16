@@ -1174,16 +1174,19 @@ margin-bottom: 1rem;
      /* <!-- ========== START SECTION SIX =========== --> */
 
      .section-6{
-        display: block;
+        display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         gap: 6rem;
         justify-content: center;
+        align-items: center;
         margin-top: 6rem;
         margin-bottom: 4rem;
     }
     
     .sect-6{
         margin-top: 2rem;
+
     }
     .sect-6 h3{
     width: 450px;
@@ -1194,6 +1197,7 @@ margin-bottom: 1rem;
     font-style: normal;
     font-weight: 600;
     line-height: 40px; /* 143.75% */
+    text-align: center;
     }
     
     .sect-6 p{
@@ -1205,11 +1209,12 @@ margin-bottom: 1rem;
     width: 450px;
     line-height: 30px;
     margin-top: 1rem;
+    text-align: center;
     }
     
     .sect-7 img{
-        width: 400px;
-        height: 350.174px;
+        width: 980px;
+        height: 550px;
         display: flex;
         justify-content: baseline;
         transition: 0.5s ease;
@@ -1238,12 +1243,21 @@ margin-bottom: 1rem;
        
         .sect-7 img{
             width: 300px;
-            height: 260.174px;
+            height: 180px;
             display: flex;
             justify-content: baseline;
         }
     }
 
+
+    @media only screen and (min-width: 600px) and (max-width: 950px){
+        .sect-7 img{
+            width: 450px;
+            height: 250px;
+            display: flex;
+            justify-content: baseline;
+        }
+    }
 
     
      /* <!-- ========== END SECTION SIX =========== --> */
