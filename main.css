@@ -1630,8 +1630,12 @@ height: fit-content;
 
 @media only screen and (max-width: 600px){
     .message_center{
-        margin: auto 10px;
-        width: 310px;
+        margin: auto 20px;
+        width: 300px;
+    }
+
+    .body_text p{
+        font-size: 10px;
     }
 }
 
