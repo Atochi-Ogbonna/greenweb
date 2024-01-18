@@ -260,13 +260,14 @@ header{
         width: fit-content;
     }
     
-    header .base{
+     header .base{
         display: flex;
         align-items: center;
         gap: 5rem;
         margin: auto;
-    }
+    } 
 
+   
     .signin{
         display: none;
     }
@@ -1502,3 +1503,138 @@ height: fit-content;
 }
 
 /* <!-- ======= FOOTER ========= --> */
+
+
+
+
+
+/* ====MESSAGE BOX======= */
+
+
+.message_static_icon i {
+    background-color: #00853C;
+    padding: 20px 20px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+    animation: wobble 2s ease infinite;
+}
+
+
+.message_static_icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 170vh;
+    bottom: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    z-index: 999;
+    transition: 0.5s;
+}
+
+.message_static_icon i:hover{
+    background-color: yellowgreen;
+}
+
+#None{
+    display: none;
+}
+
+
+/* ====MESSAGE BOX======= */
+
+
+/* ====MESSAGE DETAIL======= */
+
+.message_center{
+    background-color: #181A20;
+    border: solid 0.1rem #525C60;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    position: fixed;
+    margin: auto 30px;
+    display: none;
+    transition: 0.10s ease-in;
+}
+
+
+.message_center img{
+    margin: 22px 18px;
+}
+
+
+.head_text{
+    padding: 22px 18px;
+}
+
+.head_text h2{
+    color: white;
+}
+
+.head_text p{
+    color: white;
+}
+
+
+.body_text{
+    background-color: white;
+    padding: 12px;
+    width: 90%;
+    margin: auto;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.5s;
+}
+
+.body_text:hover{
+    background-color: rgb(235, 228, 228);
+}
+
+.body_text h6{
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.body_text h6:hover{
+    color: rgba(126, 182, 147, 1);
+}
+
+.body_text p{
+    font-size: 12px;
+}
+
+.body_text i{
+    font-size: 18px;
+    color: rgba(126, 182, 147, 1);
+    cursor: pointer;
+}
+
+.body_text i:hover{
+    transform: scale(1.1); 
+}
+
+
+@media only screen and (max-width: 600px){
+    .message_center{
+        margin: auto 10px;
+        width: 310px;
+    }
+}
+
+
+
+/* ====MESSAGE DETAIL======= */

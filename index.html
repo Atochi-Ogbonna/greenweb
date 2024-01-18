@@ -557,6 +557,44 @@
 
         <!-- ===== END SECTION FIVE ===== -->
 
+
+
+        <!-- ====MESSAGE BOX======= -->
+
+        <div class="message">
+          <div id="Visible" class="message_static_icon" onclick="messaging()"><i class="fa-solid fa-message"></i></div>
+        </div>
+
+        <div id="None" class="message">
+          <div class="message_static_icon" onclick="messagingNone()"><i class="fa-solid fa-angle-up"></i></i></div>
+        </div>
+
+          <!-- =======MESSAGE DETAIL======= -->
+
+          <div id="messageInfo" class="message_center">
+
+            <img src="Asset/logo3.png" height="50" width="50">
+      
+            <div class="head_text">
+              <h2>Hi there!</h2>
+              <p>How can we help you?</p>
+            </div>
+      
+            <div class="body_text">
+              <div>
+                <h6>Send us a message</h6>
+                <p>We Typically reply in under 10 Minutes</p>
+              </div>
+              <a href="https://wa.me/message/Y35FW5FGLLL4H1">
+                <div>
+                  <i class="fa-solid fa-location-arrow"></i>
+                 </div>
+              </a>
+            
+            </div>
+          </div>
+    
+        <!-- =====END MESSAGE BOX====== -->
         
 
            <!-- ======= FOOTER ========= -->
@@ -594,10 +632,9 @@
 
         <div class="footer-content">
             <h3>SOCIAL MEDIA</h3>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-square-x-twitter"></i>
-           
+            <a href="https://www.instagram.com/green_web1?igsh=MWpxc253Yzl3Z3BraA=="><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/groups/9581288"><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
         </div>
     </div>
 
@@ -610,8 +647,6 @@
     </div>
     
     <!-- ======= FOOTER ========= -->
-
-
 
 
 
@@ -692,6 +727,19 @@ function closeNav() {
   }
  
 //CLOSE SECTION FOUR LOAD MORE TEMPLATE//
+
+
+function messaging() {
+  document.getElementById("messageInfo").style.display = "block";
+  document.getElementById("Visible").style.display = "none";
+  document.getElementById("None").style.display = "block";
+}
+
+function messagingNone() {
+  document.getElementById("messageInfo").style.display = "none";
+  document.getElementById("None").style.display = "none";
+  document.getElementById("Visible").style.display = "flex";
+}
 
 </script>
   </body>
